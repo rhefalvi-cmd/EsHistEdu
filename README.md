@@ -6,282 +6,11 @@
     <title>EsHist - Sejarah Pergerakan Nasional</title>
     <style>
         :root {
-            --primary: #2C3E50;
-            --secondary: #E67E22;
-            --light: #ECF0F1;
-            --dark: #27AE60;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #34495E;
-        }
-        nav button {
-            background: none;
-            border: none;
-            color: white;
-            padding: 15px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav button:hover, nav button.active {
-            background-color: var(--secondary);
-        }
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .section { display: none; }
-        .section.active { display: block; }
-        
-        /* Media Section */
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .media-grid img { width: 100%; border-radius: 8px; }
-        .video-container { margin-top: 30px; text-align: center; }
-
-        /* Game Section */
-        .game-board {
-            display: grid;
-            grid-template-columns: repeat(4, 100px);
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .card {
-            width: 100px;
-            height: 100px;
-            background-color: var(--primary);
-            color: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 8px;
-            user-select: none;
-            transition: transform 0.3s;
-        }
-        .card.flipped {
-            background-color: var(--light);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            cursor: default;
-        }
-        .card.matched {
-            background-color: var(--dark);
-            color: white;
-            border: none;
-        }
-
-        /* Quiz Section */
-        .quiz-container { margin-top: 20px; }
-        .question { margin-bottom: 20px; padding: 15px; background: var(--light); border-radius: 5px; }
-        .question p { font-weight: bold; margin-top: 0; }
-        .options label { display: block; margin-bottom: 8px; cursor: pointer; }
-        button.submit-btn {
-            background-color: var(--dark);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button.submit-btn:hover { background-color: #219653; }
-        #quiz-result { margin-top: 20px; font-size: 18px; font-weight: bold; }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        .sosmed a {
-            color: var(--secondary);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .sosmed a:hover { color: white; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>EsHist (Edu Sejarah History)</h1>
-        <p>Platform Interaktif Belajar Sejarah Pergerakan Nasional</p>
-    </header>
-
-    <nav>
-        <button class="active" onclick="showSection('materi')">Materi & Media</button>
-        <button onclick="showSection('game')">Game Mencocokkan</button>
-        <button onclick="showSection('evaluasi')">20 Soal Evaluasi</button>
-    </nav>
-
-    <div class="container">
-        <!-- MATERI SECTION -->
-        <div id="materi" class="section active">
-            <h2>Materi Pergerakan Nasional</h2>
-            <p>Masa pergerakan nasional Indonesia (1908-1942) merupakan tonggak penting kebangkitan kesadaran berbangsa. Ditandai dengan berdirinya Budi Utomo, disusul oleh Sarekat Islam, Indische Partij, hingga puncaknya pada Sumpah Pemuda 1928.</p>
-            
-            <div class="media-grid">
-                <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sumpah_Pemuda_1928.jpg" alt="Sumpah Pemuda" onerror="this.src='https://placehold.co/400x250?text=Foto+Sumpah+Pemuda'">
-                    <p style="text-align:center; font-size:14px;">Kongres Pemuda II (1928)</p>
-                </div>
-                <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Budi_Utomo.jpg" alt="Budi Utomo" onerror="this.src='https://placehold.co/400x250?text=Tokoh+Budi+Utomo'">
-                    <p style="text-align:center; font-size:14px;">Tokoh-Tokoh Budi Utomo</p>
-                </div>
-            </div>
-
-            <div class="video-container">
-                <h3>Video Pembelajaran</h3>
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/6i61-X8Y7Fk" title="Sejarah Pergerakan Nasional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <!-- GAME SECTION -->
-        <div id="game" class="section">
-            <h2>Game Mencocokkan Gambar/Kata</h2>
-            <p>Temukan pasangan kartu yang sama yang berkaitan dengan sejarah Pergerakan Nasional!</p>
-            <div class="game-board" id="game-board"></div>
-            <button onclick="resetGame()" class="submit-btn" style="margin-top:20px; display:block; margin-left:auto; margin-right:auto;">Ulangi Game</button>
-        </div>
-
-        <!-- EVALUASI SECTION -->
-        <div id="evaluasi" class="section">
-            <h2>Evaluasi Pergerakan Nasional</h2>
-            <p>Kerjakan 20 soal di bawah ini untuk menguji pemahamanmu.</p>
-            <div id="quiz-form" class="quiz-container"></div>
-            <button class="submit-btn" onclick="calculateScore()">Cek Nilai</button>
-            <div id="quiz-result"></div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 EsHist - Dibuat untuk Pembelajaran Sejarah</p>
-        <p>Kunjungi Sosial Media Resmi <strong>Universitas Negeri Malang (UM)</strong>:</p>
-        <div class="sosmed">
-            <a href="https://um.ac.id/" target="_blank">Website</a> |
-            <a href="https://www.instagram.com/universitasnegerimalang/" target="_blank">Instagram</a> |
-            <a href="https://twitter.com/UM_1954" target="_blank">X (Twitter)</a> |
-            <a href="https://www.facebook.com/UniversitasNegeriMalangOfficial" target="_blank">Facebook</a> |
-            <a href="https://www.youtube.com/c/UniversitasNegeriMalangOfficial" target="_blank">YouTube</a>
-        </div>
-    </footer>
-
-    <script>
-        // --- NAVIGATION LOGIC ---
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        // --- MATCHING GAME LOGIC ---
-        const gameItems = [
-            'Budi Utomo', '1908',
-            'Sumpah Pemuda', '1928',
-            'Sarekat Islam', 'Tjokroaminoto',
-            'Indische Partij', 'Tiga Serangkai',
-            'Taman Siswa', 'Ki Hajar Dewantara',
-            'Indonesia Raya', 'W.R. Supratman'
-        ];
-        // Create pairs
-        let cards = [...gameItems, ...gameItems];
-        let hasFlippedCard = false;
-        let lockBoard = false;
-        let firstCard, secondCard;
-
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-
-        function initGame() {
-            const board = document.getElementById('game-board');
-            board.innerHTML = '';
-            shuffle(cards);
-            cards.forEach(item => {
-                const cardElement = document.createElement('div');
-                cardElement.classList.add('card');
-                cardElement.dataset.name = item;
-                cardElement.innerText = item; // Visible when flipped
-                cardElement.addEventListener('click', flipCard);
-                board.appendChild(cardElement);
-            });
-        }
-
-        function flipCard() {
-            if (lockBoard) return;
-            if (this === firstCard) return;
-
-            this.classList.add('flipped');
-
-            if (!hasFlippedCard) {
-                hasFlippedCard = true;
-                firstCard = this;
-                return;
-            }
-
-            secondCard = this;
-            checkForMatch();
-        }
-
-        function checkForMatch() {
-            let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-            isMatch ? disableCards() : unflipCards();
-        }
-
-        function disableCards() {
-Berikut adalah kode lengkap untuk website interaktif bernama **EsHist** (Evaluasi Sejarah). Website ini dirancang dalam satu file (Single Page Application) yang berisi materi video/foto, 20 soal kuis interaktif, game mencocokkan kartu (Memory Game), dan tautan sosial media Universitas Negeri Malang (UM).
-
-Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (seperti Notepad, VS Code, atau Sublime Text), lalu menyimpannya dengan nama `index.html`. Buka file tersebut menggunakan browser (Chrome, Firefox, dll).
-
-```html
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EsHist - Sejarah Pergerakan Nasional</title>
-    <style>
-        :root {
             --primary: #004d40;
             --secondary: #00796b;
             --light: #e0f2f1;
             --dark: #00251a;
+            --accent: #ffb300;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -301,13 +30,14 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
             justify-content: center;
             background-color: var(--dark);
             padding: 10px;
+            flex-wrap: wrap;
         }
         nav button {
             background: none;
             border: none;
             color: white;
             padding: 10px 20px;
-            margin: 0 5px;
+            margin: 5px;
             cursor: pointer;
             font-size: 16px;
             border-radius: 5px;
@@ -315,6 +45,7 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         }
         nav button:hover, nav button.active {
             background-color: var(--secondary);
+            border-bottom: 3px solid var(--accent);
         }
         .container {
             max-width: 1000px;
@@ -327,15 +58,76 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         .section { display: none; }
         .section.active { display: block; }
         
-        /* Media Section */
+        /* --- MAP SECTION (BARU) --- */
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid var(--light);
+            border-radius: 8px;
+            background-color: #cce7ff; /* Warna laut */
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .base-map {
+            width: 100%;
+            display: block;
+        }
+        .map-marker {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+        .map-marker img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            object-fit: cover;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .map-marker:hover img {
+            transform: scale(1.3);
+            border-color: var(--accent);
+            z-index: 20;
+        }
+        .marker-label {
+            display: none;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            font-weight: bold;
+            z-index: 21;
+        }
+        .map-marker:hover .marker-label {
+            display: block;
+        }
+
+        /* --- MEDIA SECTION --- */
         .media-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
         .media-item { width: 100%; border-radius: 8px; }
+        .dynamic-info {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+        }
         
-        /* Quiz Section */
+        /* --- QUIZ & GAME SECTION --- */
         .quiz-container { margin-top: 20px; }
         .question { font-weight: bold; margin-bottom: 10px; }
         .options { margin-bottom: 20px; }
@@ -351,7 +143,6 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         .option:hover { background: var(--secondary); color: white; }
         #quiz-result { font-size: 20px; font-weight: bold; color: var(--primary); text-align: center; }
 
-        /* Game Section */
         .game-board {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -386,7 +177,7 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
             cursor: default;
         }
 
-        /* Footer & Sosmed */
+        /* --- FOOTER --- */
         footer {
             background-color: var(--dark);
             color: white;
@@ -401,6 +192,11 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
             font-weight: bold;
         }
         .sosmed-links a:hover { color: white; }
+
+        @media(max-width: 768px) {
+            .media-grid { grid-template-columns: 1fr; }
+            .map-marker img { width: 40px; height: 40px; }
+        }
     </style>
 </head>
 <body>
@@ -410,34 +206,70 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
     <p>Evaluasi Sejarah Pergerakan Nasional Indonesia</p>
 </header>
 
-<nav>
-    <button class="active" onclick="showSection('media')">Materi & Media</button>
-    <button onclick="showSection('quiz')">Kuis Evaluasi</button>
-    <button onclick="showSection('game')">Game Mencocokkan</button>
+<!-- NAVIGASI SUDAH DIPERBAIKI MENGGUNAKAN 'this' -->
+<nav id="navbar">
+    <button class="active" onclick="showSection('peta', this)">Peta Interaktif</button>
+    <button onclick="showSection('media', this)">Materi & Media</button>
+    <button onclick="showSection('quiz', this)">Kuis Evaluasi</button>
+    <button onclick="showSection('game', this)">Game Mencocokkan</button>
 </nav>
 
 <div class="container">
-    <!-- MEDIA SECTION -->
-    <div id="media" class="section active">
-        <h2>Galeri Pergerakan Nasional</h2>
-        <p>Pelajari video dan foto bersejarah berikut sebelum mengerjakan kuis dan game.</p>
-        <div class="media-grid">
-            <!-- Ganti src video dengan link YouTube Embed yang sesuai -->
-            <iframe class="media-item" height="300" src="[https://www.youtube.com/embed/5F2v_d9lU5g?si=UvA80dZtZ-N4Mty0](https://www.youtube.com/embed/5F2v_d9lU5g?si=UvA80dZtZ-N4Mty0)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <!-- PETA INTERAKTIF SECTION -->
+    <div id="peta" class="section active">
+        <h2>Peta Sejarah Pergerakan Nasional</h2>
+        <p><strong>Instruksi:</strong> Arahkan kursor atau klik pada foto tokoh/peristiwa di peta untuk melihat detail materi pergerakan di kota tersebut.</p>
+        
+        <div class="map-container">
+            <!-- Gambar Peta Indonesia Polos -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Indonesia_blank_map.svg" alt="Peta Indonesia" class="base-map">
             
-            <!-- Ganti src img dengan link gambar yang relevan -->
-            <img class="media-item" style="height: 300px; object-fit: cover;" src="[https://upload.wikimedia.org/wikipedia/commons/e/ea/Sumpah_Pemuda_1928.jpg](https://upload.wikimedia.org/wikipedia/commons/e/ea/Sumpah_Pemuda_1928.jpg)" alt="Sumpah Pemuda">
+            <!-- Marker Jakarta (Sumpah Pemuda) -->
+            <div class="map-marker" style="top: 73%; left: 32%;" onclick="goToMateri('jakarta')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Sumpah_Pemuda_1928.jpg" alt="Sumpah Pemuda">
+                <span class="marker-label">Jakarta (Sumpah Pemuda)</span>
+            </div>
             
-            <img class="media-item" style="height: 300px; object-fit: cover;" src="[https://upload.wikimedia.org/wikipedia/commons/f/f6/Budi_Utomo.jpg](https://upload.wikimedia.org/wikipedia/commons/f/f6/Budi_Utomo.jpg)" alt="Budi Utomo">
-            
-            <div style="background:var(--light); padding: 20px; border-radius:8px;">
-                <h3>Ringkasan</h3>
-                <p>Masa Pergerakan Nasional (1908-1945) ditandai dengan lahirnya organisasi-organisasi modern seperti Budi Utomo, Sarekat Islam, Indische Partij, dan PNI. Puncaknya adalah ikrar Sumpah Pemuda pada 28 Oktober 1928 yang menyatukan tekad pemuda Indonesia.</p>
+            <!-- Marker Bandung (PNI/Soekarno) -->
+            <div class="map-marker" style="top: 77%; left: 34%;" onclick="goToMateri('bandung')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Presiden_Sukarno.jpg/400px-Presiden_Sukarno.jpg" alt="Soekarno PNI">
+                <span class="marker-label">Bandung (PNI)</span>
+            </div>
+
+            <!-- Marker Yogyakarta (Ki Hajar Dewantara / Budi Utomo) -->
+            <div class="map-marker" style="top: 80%; left: 39%;" onclick="goToMateri('yogya')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Ki_Hadjar_Dewantara_potrait.jpg" alt="Ki Hajar Dewantara">
+                <span class="marker-label">Yogyakarta (Taman Siswa)</span>
+            </div>
+
+            <!-- Marker Surabaya (Tjokroaminoto / Sarekat Islam) -->
+            <div class="map-marker" style="top: 78%; left: 45%;" onclick="goToMateri('surabaya')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Oemar_Said_Tjokroaminoto.jpg" alt="Tjokroaminoto">
+                <span class="marker-label">Surabaya (Sarekat Islam)</span>
             </div>
         </div>
     </div>
 
-    <!-- QUIZ SECTION -->
+    <!-- MATERI & MEDIA SECTION -->
+    <div id="media" class="section">
+        <h2>Materi & Galeri Pergerakan Nasional</h2>
+        
+        <!-- Kotak ini akan berubah isinya sesuai gambar di peta yang diklik -->
+        <div id="materi-dynamic-info" class="dynamic-info" style="margin-bottom: 20px;">
+            <h3>Ringkasan Umum</h3>
+            <p>Masa Pergerakan Nasional (1908-1945) ditandai dengan lahirnya organisasi-organisasi modern seperti Budi Utomo, Sarekat Islam, Indische Partij, dan PNI. Puncaknya adalah ikrar Sumpah Pemuda pada 28 Oktober 1928 yang menyatukan tekad pemuda Indonesia.</p>
+        </div>
+
+        <div class="media-grid">
+            <iframe class="media-item" height="300" src="https://www.youtube.com/embed/5F2v_d9lU5g?si=UvA80dZtZ-N4Mty0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <img class="media-item" style="height: 300px; object-fit: cover;" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Sumpah_Pemuda_1928.jpg" alt="Sumpah Pemuda">
+            <img class="media-item" style="height: 300px; object-fit: cover;" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Budi_Utomo.jpg" alt="Budi Utomo">
+        </div>
+    </div>
+
+    <!-- KUIS EVALUASI SECTION -->
     <div id="quiz" class="section">
         <h2>Kuis Evaluasi (20 Soal)</h2>
         <div id="quiz-container"></div>
@@ -445,7 +277,7 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         <p id="quiz-result"></p>
     </div>
 
-    <!-- GAME SECTION -->
+    <!-- GAME MENGCOCOKKAN SECTION -->
     <div id="game" class="section">
         <h2>Game Mencocokkan Tokoh & Organisasi</h2>
         <p>Klik kartu untuk menemukan pasangan yang tepat! (Misal: "Budi Utomo" berpasangan dengan "1908")</p>
@@ -457,25 +289,54 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
 <footer>
     <h3>Universitas Negeri Malang (UM)</h3>
     <div class="sosmed-links">
-        <a href="[https://um.ac.id](https://um.ac.id)" target="_blank">Website</a> |
-        <a href="[https://www.instagram.com/universitasnegerimalang/](https://www.instagram.com/universitasnegerimalang/)" target="_blank">Instagram</a> |
-        <a href="[https://twitter.com/UM_1954](https://twitter.com/UM_1954)" target="_blank">Twitter / X</a> |
-        <a href="[https://www.youtube.com/@UniversitasNegeriMalangOfficial](https://www.youtube.com/@UniversitasNegeriMalangOfficial)" target="_blank">YouTube</a> |
-        <a href="[https://www.facebook.com/UniversitasNegeriMalang](https://www.facebook.com/UniversitasNegeriMalang)" target="_blank">Facebook</a>
+        <a href="https://um.ac.id" target="_blank">Website</a> |
+        <a href="https://www.instagram.com/universitasnegerimalang/" target="_blank">Instagram</a> |
+        <a href="https://twitter.com/UM_1954" target="_blank">Twitter / X</a> |
+        <a href="https://www.youtube.com/@UniversitasNegeriMalangOfficial" target="_blank">YouTube</a> |
+        <a href="https://www.facebook.com/UniversitasNegeriMalang" target="_blank">Facebook</a>
     </div>
     <p style="margin-top: 15px; font-size: 12px;">&copy; 2026 EsHist - Dibuat untuk Tujuan Edukasi</p>
 </footer>
 
 <script>
-    // --- NAVIGATION LOGIC ---
-    function showSection(id) {
+    // --- FUNGSI NAVIGASI YANG DIPERBAIKI ---
+    function showSection(id, btnElement) {
+        // Sembunyikan semua konten
         document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+        
+        // Hilangkan style aktif di semua tombol navigasi
         document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+        
+        // Tampilkan konten yang dipilih
         document.getElementById(id).classList.add('active');
-        event.target.classList.add('active');
+        
+        // Berikan style aktif pada tombol yang diklik
+        if(btnElement) {
+            btnElement.classList.add('active');
+        }
     }
 
-    // --- QUIZ LOGIC ---
+    // --- FUNGSI KLIK PETA MENUJU MATERI ---
+    function goToMateri(locationId) {
+        // 1. Pindah ke Tab Materi (Tombol ke-2 di navbar)
+        const btnMateri = document.querySelectorAll('nav button')[1];
+        showSection('media', btnMateri);
+
+        // 2. Mengubah teks info materi sesuai dengan gambar kota yang diklik
+        const dynamicInfo = document.getElementById('materi-dynamic-info');
+        
+        if (locationId === 'jakarta') {
+            dynamicInfo.innerHTML = "<h3>Jakarta (Batavia) - Sumpah Pemuda</h3><p>Jakarta menjadi pusat pergerakan pemuda yang melahirkan <strong>Sumpah Pemuda</strong> pada Kongres Pemuda II, 28 Oktober 1928. Peristiwa ini menyatukan seluruh organisasi kepemudaan kedaerahan menjadi satu identitas: Indonesia. Di sini pulalah WR Supratman pertama kali menggemakan lagu Indonesia Raya.</p>";
+        } else if (locationId === 'bandung') {
+            dynamicInfo.innerHTML = "<h3>Bandung - Partai Nasional Indonesia (PNI)</h3><p>Di Bandung, Ir. Soekarno mendirikan <strong>Partai Nasional Indonesia (PNI)</strong> pada 4 Juli 1927. Bandung juga menjadi saksi bisu saat Soekarno membacakan pledoi fenomenalnya berjudul <i>'Indonesia Menggugat'</i> saat ia diadili oleh pemerintah kolonial Belanda.</p>";
+        } else if (locationId === 'yogya') {
+            dynamicInfo.innerHTML = "<h3>Yogyakarta - Taman Siswa & Muhammadiyah</h3><p>Yogyakarta merupakan kota penting dalam pergerakan bidang pendidikan dan sosial-keagamaan. Di sinilah K.H. Ahmad Dahlan mendirikan <strong>Muhammadiyah</strong> (1912), dan Ki Hajar Dewantara mendirikan perguruan <strong>Taman Siswa</strong> (1922) untuk melawan diskriminasi pendidikan Belanda.</p>";
+        } else if (locationId === 'surabaya') {
+            dynamicInfo.innerHTML = "<h3>Surabaya - Sarekat Islam</h3><p>Surabaya adalah dapur pergerakan nasional. Di bawah pimpinan H.O.S Tjokroaminoto, <strong>Sarekat Islam (SI)</strong> bermarkas di sini dan berkembang menjadi organisasi massa terbesar pertama di Indonesia. Rumah Tjokroaminoto di Peneleh menjadi tempat kos sekaligus 'sekolah politik' bagi tokoh-tokoh besar seperti Soekarno, Semaoen, dan Kartosoewirjo.</p>";
+        }
+    }
+
+    // --- KUIS EVALUASI (20 Soal Tetap Sama) ---
     const questions = [
         { q: "Organisasi pergerakan nasional pertama di Indonesia yang berdiri pada 20 Mei 1908 adalah?", a: ["Sarekat Islam", "Budi Utomo", "Indische Partij", "PNI"], ans: 1 },
         { q: "Siapakah tokoh pendiri Sarekat Dagang Islam?", a: ["H.O.S Tjokroaminoto", "Ki Hajar Dewantara", "K.H. Samanhudi", "Soekarno"], ans: 2 },
@@ -519,9 +380,8 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         document.getElementById("quiz-result").innerText = `Nilai Anda: ${finalScore} / 100 (${score} Benar dari 20 Soal)`;
     }
 
-    // --- GAME LOGIC ---
+    // --- GAME MENGCOCOKKAN (Tetap Sama) ---
     const gameBoard = document.getElementById("game-board");
-    // Pasangan kartu (Tokoh/Organisasi dan Kata Kunci)
     const cardPairs = [
         { id: 1, text: "Budi Utomo" }, { id: 1, text: "20 Mei 1908" },
         { id: 2, text: "Ki Hajar Dewantara" }, { id: 2, text: "Taman Siswa" },
@@ -543,9 +403,7 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         secondCard = null;
         lockBoard = false;
         
-        // Acak kartu
         const shuffled = cardPairs.sort(() => 0.5 - Math.random());
-        
         shuffled.forEach(item => {
             const card = document.createElement("div");
             card.classList.add("card");
@@ -569,7 +427,6 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
 
         secondCard = this;
         lockBoard = true;
-
         checkForMatch();
     }
 
@@ -596,7 +453,6 @@ Anda dapat menyalin kode di bawah ini, menempelkannya di aplikasi teks editor (s
         [firstCard, secondCard, lockBoard] = [null, null, false];
     }
 
-    // Mulai game saat halaman dimuat
     window.onload = initGame;
 </script>
 
