@@ -22,38 +22,38 @@
         header {
             background-color: var(--primary);
             color: white;
-            padding: 20px;
+            padding: 20 px;
             text-align: center;
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: var(--dark);
-            padding: 10px;
+            padding: 10 px;
             flex-wrap: wrap;
         }
         nav button {
             background: none;
             border: none;
             color: white;
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 10 px 20 px;
+            margin: 5 px;
             cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
+            font-size: 16 px;
+            border-radius: 5 px;
             transition: background 0.3s;
         }
         nav button:hover, nav button.active {
             background-color: var(--secondary);
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 3 px solid var(--accent);
         }
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 1000 px;
+            margin: 20 px auto;
+            padding: 20 px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10 px;
+            box-shadow: 0 4 px 8 px rgba(0,0,0,0.1);
         }
         .section { display: none; }
         .section.active { display: block; }
