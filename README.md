@@ -23,12 +23,13 @@
                     <p class="text-xs text-amber-300">E-Learning Sejarah Kelas XI - Pergerakan Nasional</p>
                 </div>
             </div>
-            <!-- Navigasi Menu Ditambah Tab Evaluasi -->
+            <!-- Navigasi Menu -->
             <nav class="flex flex-wrap justify-center gap-1 bg-amber-950/40 p-1 rounded-xl">
-                <button onclick="switchTab('materi')" id="nav-materi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition bg-amber-700 text-white shadow">Materi</button>
+                <button onclick="switchTab('materi')" id="nav-materi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition bg-amber-700 text-white shadow">Materi & Video</button>
                 <button onclick="switchTab('timeline')" id="nav-timeline" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Timeline</button>
-                <button onclick="switchTab('kuis')" id="nav-kuis" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Kuis Latihan</button>
-                <button onclick="switchTab('evaluasi')" id="nav-evaluasi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Evaluasi Akhir</button>
+                <button onclick="switchTab('game')" id="nav-game" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">🎮 Mini Game</button>
+                <button onclick="switchTab('kuis')" id="nav-kuis" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Kuis (10 Soal)</button>
+                <button onclick="switchTab('evaluasi')" id="nav-evaluasi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Evaluasi (10 Soal)</button>
             </nav>
         </div>
     </header>
@@ -36,7 +37,7 @@
     <!-- Main Content Area -->
     <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
 
-        <!-- TAB 1: MATERI -->
+        <!-- TAB 1: MATERI, VIDEO & GALERI FOTO -->
         <section id="tab-materi" class="space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
                 <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Bab Pembelajaran</span>
@@ -66,20 +67,58 @@
                 </div>
             </div>
 
+            <!-- Video Pembelajaran -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
+                <h3 class="text-xl font-bold text-amber-950 mb-2">🎬 Video Pembelajaran Sejarah</h3>
+                <p class="text-sm text-slate-600 mb-4">Saksikan video ringkasan materi pergerakan nasional untuk memperdalam pemahaman Anda.</p>
+                <div class="relative w-full overflow-hidden rounded-xl shadow-md border border-amber-200" style="padding-top: 56.25%;">
+                    <!-- Embed Video Pembelajaran Sejarah Pergerakan Nasional dari YouTube -->
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Pembelajaran Pergerakan Nasional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Galeri Foto Sejarah -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
+                <h3 class="text-xl font-bold text-amber-950 mb-4">📸 Galeri Tokoh & Peristiwa Bersejarah</h3>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-amber-50/50 border border-amber-200 rounded-xl overflow-hidden shadow-sm flex flex-col">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Stovia_studenten.jpg/640px-Stovia_studenten.jpg" alt="STOVIA" class="w-full h-48 object-cover">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h4 class="font-bold text-amber-900 text-sm">Gedung STOVIA Batavia</h4>
+                            <p class="text-xs text-slate-600 mt-1">Tempat lahirnya organisasi Budi Utomo oleh para pelajar kedokteran pribumi tahun 1908.</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50/50 border border-amber-200 rounded-xl overflow-hidden shadow-sm flex flex-col">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tiga_Serangkai.jpg/640px-Tiga_Serangkai.jpg" alt="Tiga Serangkai" class="w-full h-48 object-cover">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h4 class="font-bold text-amber-900 text-sm">Tiga Serangkai Indische Partij</h4>
+                            <p class="text-xs text-slate-600 mt-1">Douwes Dekker, Tjipto Mangoenkoesoemo, dan Ki Hajar Dewantara.</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50/50 border border-amber-200 rounded-xl overflow-hidden shadow-sm flex flex-col">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Kongres_Pemuda_II.jpg/640px-Kongres_Pemuda_II.jpg" alt="Sumpah Pemuda" class="w-full h-48 object-cover">
+                        <div class="p-4 flex flex-col flex-grow">
+                            <h4 class="font-bold text-amber-900 text-sm">Kongres Pemuda II (1928)</h4>
+                            <p class="text-xs text-slate-600 mt-1">Momen pengikraran Sumpah Pemuda penyatu bangsa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
                 <h2 class="text-2xl font-bold text-amber-950 mb-4">Fase-Fase Pergerakan Nasional</h2>
                 <div class="space-y-4">
                     <div class="border-l-4 border-amber-600 pl-4 py-1">
                         <h4 class="font-bold text-amber-900">1. Masa Awal Pergerakan (1908 – 1920-an)</h4>
-                        <p class="text-sm text-slate-600">Fase pendirian organisasi modern pertama bercorak sosial, budaya, dan pendidikan (Budi Utomo, Sarekat Islam, Indische Partij).</p>
+                        <p class="text-sm text-slate-600">Fase pendirian organisasi modern pertama (Budi Utomo, Sarekat Islam, Indische Partij).</p>
                     </div>
                     <div class="border-l-4 border-amber-700 pl-4 py-1">
                         <h4 class="font-bold text-amber-900">2. Masa Radikal / Non-Kooperatif (1920-an – 1930)</h4>
-                        <p class="text-sm text-slate-600">Organisasi bersikap keras dan menolak bekerja sama dengan pemerintah kolonial Belanda karena menuntut kemerdekaan mutlak (PKI, PNI, PI).</p>
+                        <p class="text-sm text-slate-600">Organisasi bersikap keras menolak bekerja sama dengan kolonial demi kemerdekaan mutlak (PKI, PNI, PI).</p>
                     </div>
                     <div class="border-l-4 border-amber-800 pl-4 py-1">
                         <h4 class="font-bold text-amber-900">3. Masa Moderat / Kooperatif (1930-an – 1942)</h4>
-                        <p class="text-sm text-slate-600">Organisasi bersikap lebih lunak, bersedia duduk di dalam Volksraad (Dewan Rakyat) demi memperjuangkan kemajuan secara bertahap (Parindra, Gerindo).</p>
+                        <p class="text-sm text-slate-600">Organisasi bersikap lebih lunak, duduk di Volksraad demi kemajuan bertahap (Parindra, Gerindo).</p>
                     </div>
                 </div>
             </div>
@@ -89,36 +128,56 @@
         <section id="tab-timeline" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
                 <h2 class="text-2xl font-bold text-amber-950 mb-2">Garis Waktu Peristiwa Penting</h2>
-                <p class="text-slate-600 text-sm mb-6">Klik tombol tahun di bawah ini untuk melihat detail peristiwa penting pergerakan nasional.</p>
-
-                <!-- Tombol Tahun -->
-                <div class="flex flex-wrap gap-2 mb-6" id="timeline-buttons">
-                    <!-- Dimasukkan lewat JS -->
-                </div>
-
-                <!-- Kartu Detail Timeline -->
+                <p class="text-slate-600 text-sm mb-6">Klik tombol tahun di bawah ini untuk melihat detail peristiwa.</p>
+                <div class="flex flex-wrap gap-2 mb-6" id="timeline-buttons"></div>
                 <div id="timeline-detail" class="bg-amber-50 p-6 rounded-xl border border-amber-200 transition-all duration-300">
                     <span id="tl-year" class="bg-amber-800 text-white text-xs font-bold px-3 py-1 rounded-full">Tahun</span>
                     <h3 id="tl-title" class="text-xl font-bold text-amber-950 mt-2">Judul Peristiwa</h3>
-                    <p id="tl-desc" class="text-slate-700 mt-2 text-sm md:text-base leading-relaxed">Deskripsi lengkap peristiwa akan muncul di sini.</p>
+                    <p id="tl-desc" class="text-slate-700 mt-2 text-sm md:text-base leading-relaxed">Deskripsi lengkap peristiwa.</p>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 3: KUIS LATIHAN INTERAKTIF -->
+        <!-- TAB 3: MINI GAME EDUKASI -->
+        <section id="tab-game" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-2xl mx-auto text-center">
+                <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Tantangan Kilat</span>
+                <h2 class="text-2xl font-bold text-amber-950 mt-2">🎮 Mini Game: Tebak Peristiwa Sejarah</h2>
+                <p class="text-sm text-slate-600 mt-1">Uji cepat daya ingatmu seputar tokoh dan tonggak sejarah!</p>
+
+                <div id="game-card" class="mt-6 p-6 rounded-2xl bg-amber-50 border border-amber-200 text-left">
+                    <div class="flex justify-between items-center mb-4 text-xs font-bold text-amber-800">
+                        <span id="game-progress">Tantangan 1 / 4</span>
+                        <span id="game-score">Skor: 0</span>
+                    </div>
+                    <p id="game-question" class="text-lg font-bold text-slate-900 mb-4">Pertanyaan game...</p>
+                    <div id="game-options" class="space-y-3"></div>
+                </div>
+
+                <div id="game-feedback" class="mt-4 hidden p-3 rounded-xl text-sm font-semibold"></div>
+
+                <div id="game-finish" class="hidden mt-6 p-6 bg-amber-900 text-amber-100 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-2">🎉 Permainan Selesai!</h3>
+                    <p id="game-final-score" class="text-lg mb-4">Skor Akhir Anda: 0</p>
+                    <button onclick="restartGame()" class="bg-amber-600 hover:bg-amber-500 text-white font-bold px-6 py-2 rounded-xl transition">
+                        Main Lagi
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: KUIS LATIHAN INTERAKTIF (10 SOAL) -->
         <section id="tab-kuis" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-2xl mx-auto">
                 <div id="quiz-container">
                     <div class="flex justify-between items-center mb-4 border-b pb-3">
-                        <h2 class="text-xl font-bold text-amber-950">Kuis Latihan Pemahaman</h2>
-                        <span id="quiz-progress" class="text-sm font-semibold text-amber-700">Soal 1 dari 5</span>
+                        <h2 class="text-xl font-bold text-amber-950">Kuis Latihan Pemahaman (10 Soal)</h2>
+                        <span id="quiz-progress" class="text-sm font-semibold text-amber-700">Soal 1 dari 10</span>
                     </div>
 
                     <div id="question-box">
-                        <p id="question-text" class="text-lg font-medium text-slate-800 mb-4">Pertanyaan kuis akan tampil di sini...</p>
-                        <div id="options-container" class="space-y-3">
-                            <!-- Pilihan opsi via JS -->
-                        </div>
+                        <p id="question-text" class="text-lg font-medium text-slate-800 mb-4">Pertanyaan kuis...</p>
+                        <div id="options-container" class="space-y-3"></div>
                     </div>
 
                     <div id="feedback-box" class="mt-6 hidden p-4 rounded-xl text-sm"></div>
@@ -130,11 +189,10 @@
                     </div>
                 </div>
 
-                <!-- Hasil Akhir Kuis -->
                 <div id="quiz-result" class="hidden text-center py-8">
                     <div class="text-5xl mb-3">🏆</div>
-                    <h3 class="text-2xl font-bold text-amber-950">Kuis Selesai!</h3>
-                    <p id="score-text" class="text-lg text-slate-700 mt-2">Skor Anda: 0 dari 5</p>
+                    <h3 class="text-2xl font-bold text-amber-950">Kuis Latihan Selesai!</h3>
+                    <p id="score-text" class="text-lg text-slate-700 mt-2">Skor Anda: 0 dari 10</p>
                     <button onclick="restartQuiz()" class="mt-6 bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition">
                         Ulangi Kuis Latihan
                     </button>
@@ -142,27 +200,22 @@
             </div>
         </section>
 
-        <!-- TAB 4: EVALUASI AKHIR (UJIAN FORMATIF) -->
+        <!-- TAB 5: EVALUASI AKHIR (10 SOAL FORMATIF) -->
         <section id="tab-evaluasi" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-3xl mx-auto">
                 <div class="border-b pb-4 mb-6">
-                    <h2 class="text-2xl font-bold text-amber-950">Evaluasi Akhir Pembelajaran</h2>
-                    <p class="text-sm text-slate-600 mt-1">Jawablah seluruh soal pilihan ganda di bawah ini dengan teliti. Nilai akan dihitung secara otomatis setelah Anda menekan tombol kumpul.</p>
+                    <h2 class="text-2xl font-bold text-amber-950">Evaluasi Akhir Pembelajaran (10 Soal)</h2>
+                    <p class="text-sm text-slate-600 mt-1">Jawablah seluruh 10 soal pilihan ganda di bawah ini dengan teliti.</p>
                 </div>
 
-                <!-- Daftar Soal Evaluasi -->
-                <div id="eval-questions-container" class="space-y-8">
-                    <!-- Dirender lewat JavaScript -->
-                </div>
+                <div id="eval-questions-container" class="space-y-8"></div>
 
-                <!-- Tombol Submit Evaluasi -->
                 <div id="eval-submit-container" class="mt-8 pt-4 border-t text-center">
                     <button onclick="submitEvaluation()" class="bg-amber-900 hover:bg-amber-950 text-white font-bold px-8 py-3 rounded-xl shadow-md transition">
                         Kumpul dan Lihat Hasil Evaluasi
                     </button>
                 </div>
 
-                <!-- Hasil Skor Evaluasi -->
                 <div id="eval-result-box" class="hidden mt-6 p-6 rounded-2xl bg-amber-50 border border-amber-300 text-center">
                     <h3 class="text-2xl font-bold text-amber-950 mb-2">📊 Hasil Evaluasi Anda</h3>
                     <p id="eval-score-text" class="text-xl font-semibold text-amber-800 my-2">Skor: 0 / 100</p>
@@ -202,7 +255,7 @@
     <script>
         // --- 1. NAVIGASI TAB ---
         function switchTab(tabId) {
-            ['materi', 'timeline', 'kuis', 'evaluasi'].forEach(id => {
+            ['materi', 'timeline', 'game', 'kuis', 'evaluasi'].forEach(id => {
                 document.getElementById('tab-' + id).classList.add('hidden');
                 document.getElementById('nav-' + id).classList.remove('bg-amber-700', 'text-white', 'shadow');
                 document.getElementById('nav-' + id).classList.add('hover:bg-amber-800');
@@ -216,35 +269,16 @@
 
         // --- 2. TIMELINE DATA ---
         const timelineData = [
-            {
-                year: "1908",
-                title: "Berdirinya Budi Utomo",
-                desc: "Didirikan oleh dr. Wahidin Sudirohusodo dan Sutomo di STOVIA Batavia. Dianggap sebagai tonggak awal kebangkitan nasional karena untuk pertama kalinya organisasi modern dengan kesadaran kebangsaan dibentuk."
-            },
-            {
-                year: "1912",
-                title: "Sarekat Islam & Indische Partij",
-                desc: "Sarekat Dagang Islam diubah menjadi Sarekat Islam (SI) oleh H.O.S. Tjokroaminoto agar merangkul rakyat luas. Pada tahun yang sama, Tiga Serangkai (Douwes Dekker, Tjipto Mangoenkoesoemo, Ki Hajar Dewantara) mendirikan Indische Partij, partai politik pertama yang secara tegas menyuarakan kemerdekaan."
-            },
-            {
-                year: "1926",
-                title: "Kongres Pemuda I",
-                desc: "Diadakan di Batavia untuk menyatukan berbagai organisasi pemuda kedaerahan (seperti Jong Java, Jong Sumatranen Bond) agar memiliki visi kebangsaan yang utuh."
-            },
-            {
-                year: "1928",
-                title: "Sumpah Pemuda (Kongres Pemuda II)",
-                desc: "Momen monumental di mana para pemuda dari seluruh Nusantara mengikrarkan Satu Bangsa, Satu Tanah Air, dan Satu Bahasa: Indonesia. Lagu Indonesia Raya ciptaan W.R. Supratman juga diperdengarkan untuk pertama kalinya."
-            },
-            {
-                year: "1942",
-                title: "Akhir Masa Kolonial Belanda",
-                desc: "Jentikan Perang Dunia II membuat Jepang masuk ke Indonesia, menandai runtuhnya kekuasaan Hindia Belanda dan dimulainya pendudukan militer Jepang."
-            }
+            { year: "1908", title: "Berdirinya Budi Utomo", desc: "Didirikan oleh dr. Wahidin Sudirohusodo dan Sutomo di STOVIA Batavia. Tonggak awal kebangkitan nasional." },
+            { year: "1912", title: "Sarekat Islam & Indische Partij", desc: "Sarekat Dagang Islam diubah menjadi SI, dan Tiga Serangkai mendirikan Indische Partij." },
+            { year: "1926", title: "Kongres Pemuda I", desc: "Diadakan di Batavia untuk menyatukan visi organisasi pemuda kedaerahan." },
+            { year: "1928", title: "Sumpah Pemuda", desc: "Momen monumental ikrar Satu Nusa, Satu Bangsa, dan Satu Bahasa: Indonesia." },
+            { year: "1942", title: "Akhir Kolonial Belanda", desc: "Jepang masuk menggantikan kekuasaan Belanda seiring Perang Dunia II." }
         ];
 
         function initTimeline() {
             const btnContainer = document.getElementById('timeline-buttons');
+            btnContainer.innerHTML = '';
             timelineData.forEach((item, index) => {
                 const btn = document.createElement('button');
                 btn.className = `px-4 py-2 rounded-xl text-sm font-bold border transition ${index === 0 ? 'bg-amber-800 text-white border-amber-800' : 'bg-white text-amber-900 border-amber-300 hover:bg-amber-50'}`;
@@ -267,38 +301,81 @@
             document.getElementById('tl-desc').innerText = data.desc;
         }
 
-        // --- 3. KUIS LATIHAN DATA & LOGIKA ---
-        const quizData = [
-            {
-                question: "Organisasi modern pertama di Indonesia yang lahir pada tanggal 20 Mei 1908 adalah...",
-                options: ["Sarekat Islam", "Budi Utomo", "Indische Partij", "Perhimpunan Indonesia"],
-                answer: 1,
-                explanation: "Budi Utomo didirikan pada 20 Mei 1908 oleh para pelajar STOVIA di bawah pimpinan Sutomo."
-            },
-            {
-                question: "Faktor internal utama yang mendorong munculnya pergerakan nasional adalah...",
-                options: ["Kemenangan Jepang atas Rusia", "Penderitaan rakyat akibat penjajahan", "Pengaruh Revolusi Prancis", "Masuknya paham liberalisme dari Eropa"],
-                answer: 1,
-                explanation: "Penderitaan rakyat akibat kolonialisme yang berkepanjangan memicu tumbuhnya kesadaran untuk melawan secara bersama-sama."
-            },
-            {
-                question: "Siapa tokoh yang dikenal sebagai motor penggerak Indische Partij bersama Douwes Dekker dan Tjipto Mangoenkoesoemo?",
-                options: ["Soekarno", "Ki Hajar Dewantara (Suwardi Suryaningrat)", "H.O.S. Tjokroaminoto", "Mohammad Hatta"],
-                answer: 1,
-                explanation: "Ketiganya dikenal sebagai 'Tiga Serangkai' pendiri Indische Partij."
-            },
-            {
-                question: "Sumpah Pemuda yang menegaskan ikrar satu nusa, satu bangsa, dan satu bahasa terjadi pada tahun...",
-                options: ["1908", "1912", "1928", "1945"],
-                answer: 2,
-                explanation: "Sumpah Pemuda dicetuskan pada Kongres Pemuda II tanggal 28 Oktober 1928."
-            },
-            {
-                question: "Sikap organisasi pergerakan nasional yang menolak bekerja sama sama sekali dengan pemerintah kolonial Belanda disebut...",
-                options: ["Kooperatif", "Radikal / Non-Kooperatif", "Moderat", "Liberal"],
-                answer: 1,
-                explanation: "Non-kooperatif berarti jalur perjuangan radikal tanpa kompromi dengan pihak penjajah."
+        // --- 3. MINI GAME DATA & LOGIKA ---
+        const gameData = [
+            { q: "Siapa tokoh yang memimpin pendirian Budi Utomo di STOVIA?", options: ["Dr. Sutomo", "Soekarno", "HOS Tjokroaminoto", "Ki Hajar Dewantara"], answer: 0 },
+            { q: "Tanggal berapakah Sumpah Pemuda diikrarkan?", options: ["20 Mei 1908", "28 Oktober 1928", "17 Agustus 1945", "1 Juni 1945"], answer: 1 },
+            { q: "Partai politik pertama di Indonesia yang terang-terangan menuntut kemerdekaan adalah...", options: ["Budi Utomo", "Sarekat Islam", "Indische Partij", "Gerindo"], answer: 2 },
+            { q: "Lagu Indonesia Raya pertama kali diperdengarkan pada acara...", options: ["Kongres Pemuda II", "Sidang BPUPKI", "Proklamasi", "Kongres Budi Utomo"], answer: 0 }
+        ];
+
+        let currentGameStep = 0;
+        let gameScoreVal = 0;
+
+        function loadGameQuestion() {
+            if (currentGameStep >= gameData.length) {
+                document.getElementById('game-card').classList.add('hidden');
+                document.getElementById('game-feedback').classList.add('hidden');
+                document.getElementById('game-finish').classList.remove('hidden');
+                document.getElementById('game-final-score').innerText = `Skor Akhir Anda: ${gameScoreVal} dari ${gameData.length * 25}`;
+                return;
             }
+
+            const currentG = gameData[currentGameStep];
+            document.getElementById('game-progress').innerText = `Tantangan ${currentGameStep + 1} / ${gameData.length}`;
+            document.getElementById('game-score').innerText = `Skor: ${gameScoreVal}`;
+            document.getElementById('game-question').innerText = currentG.q;
+
+            const optContainer = document.getElementById('game-options');
+            optContainer.innerHTML = '';
+            currentG.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-3 rounded-xl border border-amber-300 bg-white hover:bg-amber-100 font-medium text-slate-800 transition';
+                btn.innerText = opt;
+                btn.onclick = () => checkGameAnswer(idx, currentG.answer);
+                optContainer.appendChild(btn);
+            });
+            document.getElementById('game-feedback').classList.add('hidden');
+        }
+
+        function checkGameAnswer(selected, correct) {
+            const feedback = document.getElementById('game-feedback');
+            feedback.classList.remove('hidden');
+            if (selected === correct) {
+                gameScoreVal += 25;
+                feedback.className = 'mt-4 p-3 rounded-xl text-sm font-semibold bg-green-100 text-green-900 border border-green-300';
+                feedback.innerText = '✨ Benar! +25 Poin';
+            } else {
+                feedback.className = 'mt-4 p-3 rounded-xl text-sm font-semibold bg-red-100 text-red-900 border border-red-300';
+                feedback.innerText = '❌ Kurang tepat!';
+            }
+
+            setTimeout(() => {
+                currentGameStep++;
+                loadGameQuestion();
+            }, 1000);
+        }
+
+        function restartGame() {
+            currentGameStep = 0;
+            gameScoreVal = 0;
+            document.getElementById('game-card').classList.remove('hidden');
+            document.getElementById('game-finish').classList.add('hidden');
+            loadGameQuestion();
+        }
+
+        // --- 4. KUIS LATIHAN (10 SOAL) ---
+        const quizData = [
+            { question: "Organisasi modern pertama di Indonesia yang lahir pada tanggal 20 Mei 1908 adalah...", options: ["Sarekat Islam", "Budi Utomo", "Indische Partij", "Perhimpunan Indonesia"], answer: 1, explanation: "Budi Utomo didirikan pada 20 Mei 1908 oleh para pelajar STOVIA." },
+            { question: "Faktor internal utama yang mendorong munculnya pergerakan nasional adalah...", options: ["Kemenangan Jepang atas Rusia", "Penderitaan rakyat akibat penjajahan", "Pengaruh Revolusi Prancis", "Masuknya paham liberalisme"], answer: 1, explanation: "Penderitaan akibat kolonialisme memicu kesadaran melawan bersama." },
+            { question: "Tokoh motor penggerak Indische Partij bersama Tjipto dan Ki Hajar Dewantara adalah...", options: ["Soekarno", "Douwes Dekker", "HOS Tjokroaminoto", "Mohammad Hatta"], answer: 1, explanation: "Ketiganya dikenal sebagai Tiga Serangkai." },
+            { question: "Sumpah Pemuda menegaskan ikrar satu nusa, bangsa, dan bahasa terjadi tahun...", options: ["1908", "1912", "1928", "1945"], answer: 2, explanation: "Sumpah Pemuda dicetuskan pada Kongres Pemuda II tahun 1928." },
+            { question: "Sikap organisasi pergerakan yang menolak bekerja sama dengan Belanda disebut...", options: ["Kooperatif", "Radikal / Non-Kooperatif", "Moderat", "Liberal"], answer: 1, explanation: "Non-kooperatif berarti jalur perjuangan tanpa kompromi." },
+            { question: "Politik Etis dicetuskan oleh pemerintah kolonial Belanda pada tahun...", options: ["1901", "1908", "1928", "1942"], answer: 0, explanation: "Politik Etis atau Politik Balas Budi dimulai tahun 1901." },
+            { question: "Siapakah tokoh pencipta lagu kebangsaan 'Indonesia Raya'?", options: ["W.R. Supratman", "Ibu Soed", "Kusbini", "C. Simanjuntak"], answer: 0, explanation: "W.R. Supratman menciptakan lagu Indonesia Raya." },
+            { question: "Perhimpunan Indonesia (PI) adalah organisasi mahasiswa Indonesia yang awalnya didirikan di negara...", options: ["Jerman", "Belanda", "Prancis", "Jepang"], answer: 1, explanation: "Perhimpunan Indonesia didirikan di negeri Belanda oleh para pelajar Indonesia." },
+            { question: "Organisasi Sarekat Islam dipimpin oleh tokoh karismatik bernama...", options: ["H.O.S. Tjokroaminoto", "Dr. Wahidin Sudirohusodo", "Sutan Sjahrir", "Amir Sjarifuddin"], answer: 0, explanation: "H.O.S. Tjokroaminoto adalah pemimpin besar Sarekat Islam." },
+            { question: "Tujuan utama berdirinya Budi Utomo pada awal pembentukannya adalah...", options: ["Merebut kemerdekaan secara militer", "Memajukan pengajaran, pertanian, dan kebudayaan", "Mendirikan partai politik radikal", "Mengusir seluruh bangsa Eropa"], answer: 1, explanation: "Fokus awal Budi Utomo adalah bidang sosial, budaya, dan pendidikan." }
         ];
 
         let currentQuestion = 0;
@@ -331,8 +408,7 @@
             answered = true;
 
             const q = quizData[currentQuestion];
-            const optionsContainer = document.getElementById('options-container');
-            const buttons = optionsContainer.children;
+            const buttons = document.getElementById('options-container').children;
             const feedbackBox = document.getElementById('feedback-box');
 
             if (selectedIndex === q.answer) {
@@ -358,7 +434,7 @@
             } else {
                 document.getElementById('quiz-container').classList.add('hidden');
                 document.getElementById('quiz-result').classList.remove('hidden');
-                document.getElementById('score-text').innerText = `Skor Anda: ${score} dari ${quizData.length} (${score * 20} poin)`;
+                document.getElementById('score-text').innerText = `Skor Anda: ${score} dari ${quizData.length} (${score * 10} poin)`;
             }
         }
 
@@ -370,56 +446,37 @@
             loadQuestion();
         }
 
-        // --- 4. EVALUASI AKHIR DATA & LOGIKA ---
+        // --- 5. EVALUASI AKHIR (10 SOAL) ---
         const evaluasiData = [
-            {
-                q: "Politik Etis yang diterapkan oleh pemerintah kolonial Belanda pada tahun 1901 secara tidak langsung memicu pergerakan nasional melalui program...",
-                options: ["Irigasi pertanian", "Migrasi/Transmigrasi", "Edukasi (pendidikan kaum pribumi)", "Kerja rodi pembangunan"],
-                answer: 2
-            },
-            {
-                q: "Organisasi pertama yang menggunakan nama 'Indonesia' secara tegas pada nama organisasi dan ruang lingkup perjuangannya di negeri Belanda adalah...",
-                options: ["Budi Utomo", "Perhimpunan Indonesia (PI)", "Indische Partij", "Partai Nasional Indonesia (PNI)"],
-                answer: 1
-            },
-            {
-                q: "Salah satu faktor eksternal kebangkitan nasional di Indonesia adalah kemenangan Jepang atas Rusia pada tahun 1905. Hal ini penting karena...",
-                options: ["Jepang membagikan senjata gratis ke Indonesia", "Mematahkan mitos supremasi bangsa kulit putih atas bangsa Asia", "Jepang langsung memerdekakan Indonesia", "Rusia adalah sekutu dekat Belanda"],
-                answer: 1
-            },
-            {
-                q: "Tokoh pencipta lagu kebangsaan 'Indonesia Raya' yang pertama kali diperdengarkan pada Kongres Pemuda II adalah...",
-                options: ["W.R. Supratman", "Ibu Soed", "C. Simanjuntak", "Kusbini"],
-                answer: 0
-            },
-            {
-                q: "Strategi perjuangan organisasi yang bersedia mengirimkan wakilnya duduk di dalam dewan rakyat bentukan Belanda (Volksraad) dikenal sebagai metode...",
-                options: ["Non-kooperatif", "Radikal", "Kooperatif (Moderat)", "Gerilya"],
-                answer: 2
-            }
+            { q: "Politik Etis pada 1901 memicu pergerakan nasional lewat program utamanya di bidang...", options: ["Irigasi", "Migrasi", "Edukasi (pendidikan pribumi)", "Kerja rodi"], answer: 2 },
+            { q: "Organisasi pertama yang menggunakan nama 'Indonesia' secara tegas di luar negeri adalah...", options: ["Budi Utomo", "Perhimpunan Indonesia (PI)", "Indische Partij", "PNI"], answer: 1 },
+            { q: "Kemenangan Jepang atas Rusia pada tahun 1905 memicu kebangkitan karena...", options: ["Bagikan senjata gratis", "Mematahkan mitos supremasi kulit putih atas Asia", "Jepang langsung merdekakan Indonesia", "Rusia sekutu dekat Belanda"], answer: 1 },
+            { q: "Pencipta lagu Indonesia Raya yang diperdengarkan di Kongres Pemuda II adalah...", options: ["W.R. Supratman", "Ibu Soed", "C. Simanjuntak", "Kusbini"], answer: 0 },
+            { q: "Strategi perjuangan mengirim wakil duduk di dewan rakyat bentukan Belanda disebut...", options: ["Non-kooperatif", "Radikal", "Kooperatif (Moderat)", "Gerilya"], answer: 2 },
+            { q: "Douwes Dekker, Tjipto Mangoenkoesoemo, dan Ki Hajar Dewantara mendirikan partai bernama...", options: ["Indische Partij", "Budi Utomo", "Sarekat Islam", "Partai Komunis Indonesia"], answer: 0 },
+            { q: "Kongres Pemuda I yang bertujuan menyatukan organisasi pemuda diselenggarakan pada tahun...", options: ["1908", "1912", "1926", "1928"], answer: 2 },
+            { q: "Dewan Rakyat bentukan pemerintah kolonial Belanda tempat kaum moderat duduk berjuang disebut...", options: ["Volksraad", "Budi Utomo", "Stovia", "Parindra"], answer: 0 },
+            { q: "Organisasi pergerakan nasional yang didirikan oleh Douwes Dekker memiliki ciri khas bersifat...", options: ["Kedaerahan suku", "Indis (Nasional untuk semua golongan", "Keagamaan eksklusif", "Kooperatif penuh dengan gubernur"], answer: 1 },
+            { q: "Faktor eksternal kebangkitan nasional yang berasal dari daratan Cina dipelopori oleh...", options: ["Sun Yat-sen", "Mahatma Gandhi", "Jose Rizal", "Emilio Aguinaldo"], answer: 0 }
         ];
 
         function initEvaluation() {
             const container = document.getElementById('eval-questions-container');
             container.innerHTML = '';
-            
             evaluasiData.forEach((item, index) => {
                 let optionsHtml = '';
                 item.options.forEach((opt, optIdx) => {
                     optionsHtml += `
                         <label class="flex items-center space-x-3 p-3 rounded-xl border border-amber-200 bg-amber-50/40 hover:bg-amber-100 cursor-pointer transition text-sm text-slate-700">
-                            <input type="radio" name="eval-${index}" value="${optIdx}" class="w-4 h-4 text-amber-800 focus:ring-amber-700">
+                            <input type="radio" name="eval-${index}" value="${optIdx}" class="w-4 h-4 text-amber-800">
                             <span>${opt}</span>
-                        </label>
-                    `;
+                        </label>`;
                 });
-
                 container.innerHTML += `
                     <div class="p-5 rounded-2xl bg-white border border-amber-200 shadow-sm">
                         <p class="font-bold text-amber-950 mb-3">Soal ${index + 1}. ${item.q}</p>
                         <div class="space-y-2">${optionsHtml}</div>
-                    </div>
-                `;
+                    </div>`;
             });
         }
 
@@ -428,28 +485,21 @@
             let allAnswered = true;
 
             evaluasiData.forEach((item, index) => {
-                const selected = document.querySelector(`input[name="eval-${index}"]:checked`);
-                if (!selected) {
-                    allAnswered = false;
-                }
+                if (!document.querySelector(`input[name="eval-${index}"]:checked`)) allAnswered = false;
             });
 
             if (!allAnswered) {
-                alert("Harap jawab semua soal evaluasi terlebih dahulu sebelum mengumpulkan!");
+                alert("Harap jawab semua 10 soal evaluasi terlebih dahulu!");
                 return;
             }
 
             evaluasiData.forEach((item, index) => {
                 const selected = document.querySelector(`input[name="eval-${index}"]:checked`);
-                if (parseInt(selected.value) === item.answer) {
-                    correctCount++;
-                }
+                if (parseInt(selected.value) === item.answer) correctCount++;
             });
 
-            const finalScore = correctCount * 20; // 5 soal x 20 = 100
-            
-            // Tampilkan hasil
-            document.getElementById('eval-score-text').innerText = `Skor Anda: ${finalScore} dari 100 (${correctCount} benar dari 5 soal)`;
+            const finalScore = correctCount * 10; // 10 soal x 10 = 100
+            document.getElementById('eval-score-text').innerText = `Skor Anda: ${finalScore} / 100 (${correctCount} benar dari 10 soal)`;
             
             let message = "";
             if (finalScore === 100) {
@@ -457,15 +507,14 @@
             } else if (finalScore >= 80) {
                 message = "Sangat baik! Anda sudah memahami sebagian besar materi dengan sangat baik.";
             } else if (finalScore >= 60) {
-                message = "Cukup baik, namun disarankan untuk membaca ulang bagian materi dan timeline.";
+                message = "Cukup baik, namun disarankan untuk membaca ulang bagian materi.";
             } else {
-                message = "Perlu belajar lebih giat lagi. Silakan pelajari kembali tab Materi dan Kuis Latihan.";
+                message = "Perlu belajar lebih giat lagi. Silakan pelajari kembali tab Materi dan Video.";
             }
             document.getElementById('eval-desc-text').innerText = message;
 
             document.getElementById('eval-submit-container').classList.add('hidden');
             document.getElementById('eval-result-box').classList.remove('hidden');
-            
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
 
@@ -476,9 +525,10 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Inisialisasi awal saat halaman dimuat
+        // Inisialisasi awal
         window.onload = () => {
             initTimeline();
+            loadGameQuestion();
             loadQuestion();
             initEvaluation();
         };
