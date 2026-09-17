@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EsHist - Pembelajaran Interaktif Pergerakan Nasional (Kelas 11)</title>
-    <!-- Tailwind CSS untuk Desain Modern -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -23,13 +23,13 @@
                     <p class="text-xs text-amber-300">E-Learning Sejarah Kelas XI - Pergerakan Nasional</p>
                 </div>
             </div>
-            <!-- Navigasi Menu -->
-            <nav class="flex flex-wrap justify-center gap-1 bg-amber-950/40 p-1 rounded-xl">
-                <button onclick="switchTab('materi')" id="nav-materi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition bg-amber-700 text-white shadow">Materi & Video</button>
-                <button onclick="switchTab('timeline')" id="nav-timeline" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Timeline</button>
-                <button onclick="switchTab('game')" id="nav-game" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">🎮 Mini Game</button>
-                <button onclick="switchTab('kuis')" id="nav-kuis" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Kuis (10 Soal)</button>
-                <button onclick="switchTab('evaluasi')" id="nav-evaluasi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800">Evaluasi (10 Soal)</button>
+            <!-- Navigasi Menu (Tombol Headbar) -->
+            <nav class="flex flex-wrap justify-center gap-1 bg-amber-950/40 p-1 rounded-xl relative z-50">
+                <button type="button" onclick="switchTab('materi')" id="nav-materi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition bg-amber-700 text-white shadow cursor-pointer">Materi & Video</button>
+                <button type="button" onclick="switchTab('timeline')" id="nav-timeline" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800 cursor-pointer">Timeline</button>
+                <button type="button" onclick="switchTab('game')" id="nav-game" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800 cursor-pointer">🎮 Mini Game</button>
+                <button type="button" onclick="switchTab('kuis')" id="nav-kuis" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800 cursor-pointer">Kuis (10 Soal)</button>
+                <button type="button" onclick="switchTab('evaluasi')" id="nav-evaluasi" class="px-3 py-2 rounded-lg font-semibold text-xs md:text-sm transition hover:bg-amber-800 cursor-pointer">Evaluasi (10 Soal)</button>
             </nav>
         </div>
     </header>
@@ -37,8 +37,8 @@
     <!-- Main Content Area -->
     <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
 
-        <!-- TAB 1: MATERI, VIDEO & GALERI FOTO -->
-        <section id="tab-materi" class="space-y-6">
+        <!-- TAB 1: MATERI -->
+        <section id="tab-materi" class="space-y-6 block">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
                 <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Bab Pembelajaran</span>
                 <h2 class="text-2xl md:text-3xl font-bold text-amber-950 mt-2">Latar Belakang & Tumbuhnya Kesadaran Nasional</h2>
@@ -72,7 +72,6 @@
                 <h3 class="text-xl font-bold text-amber-950 mb-2">🎬 Video Pembelajaran Sejarah</h3>
                 <p class="text-sm text-slate-600 mb-4">Saksikan video ringkasan materi pergerakan nasional untuk memperdalam pemahaman Anda.</p>
                 <div class="relative w-full overflow-hidden rounded-xl shadow-md border border-amber-200" style="padding-top: 56.25%;">
-                    <!-- Embed Video Pembelajaran Sejarah Pergerakan Nasional dari YouTube -->
                     <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Pembelajaran Pergerakan Nasional" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -104,27 +103,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
-                <h2 class="text-2xl font-bold text-amber-950 mb-4">Fase-Fase Pergerakan Nasional</h2>
-                <div class="space-y-4">
-                    <div class="border-l-4 border-amber-600 pl-4 py-1">
-                        <h4 class="font-bold text-amber-900">1. Masa Awal Pergerakan (1908 – 1920-an)</h4>
-                        <p class="text-sm text-slate-600">Fase pendirian organisasi modern pertama (Budi Utomo, Sarekat Islam, Indische Partij).</p>
-                    </div>
-                    <div class="border-l-4 border-amber-700 pl-4 py-1">
-                        <h4 class="font-bold text-amber-900">2. Masa Radikal / Non-Kooperatif (1920-an – 1930)</h4>
-                        <p class="text-sm text-slate-600">Organisasi bersikap keras menolak bekerja sama dengan kolonial demi kemerdekaan mutlak (PKI, PNI, PI).</p>
-                    </div>
-                    <div class="border-l-4 border-amber-800 pl-4 py-1">
-                        <h4 class="font-bold text-amber-900">3. Masa Moderat / Kooperatif (1930-an – 1942)</h4>
-                        <p class="text-sm text-slate-600">Organisasi bersikap lebih lunak, duduk di Volksraad demi kemajuan bertahap (Parindra, Gerindo).</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- TAB 2: TIMELINE INTERAKTIF -->
+        <!-- TAB 2: TIMELINE -->
         <section id="tab-timeline" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200">
                 <h2 class="text-2xl font-bold text-amber-950 mb-2">Garis Waktu Peristiwa Penting</h2>
@@ -138,7 +119,7 @@
             </div>
         </section>
 
-        <!-- TAB 3: MINI GAME EDUKASI -->
+        <!-- TAB 3: MINI GAME -->
         <section id="tab-game" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-2xl mx-auto text-center">
                 <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Tantangan Kilat</span>
@@ -159,14 +140,12 @@
                 <div id="game-finish" class="hidden mt-6 p-6 bg-amber-900 text-amber-100 rounded-2xl">
                     <h3 class="text-2xl font-bold mb-2">🎉 Permainan Selesai!</h3>
                     <p id="game-final-score" class="text-lg mb-4">Skor Akhir Anda: 0</p>
-                    <button onclick="restartGame()" class="bg-amber-600 hover:bg-amber-500 text-white font-bold px-6 py-2 rounded-xl transition">
-                        Main Lagi
-                    </button>
+                    <button type="button" onclick="restartGame()" class="bg-amber-600 hover:bg-amber-500 text-white font-bold px-6 py-2 rounded-xl transition cursor-pointer">Main Lagi</button>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 4: KUIS LATIHAN INTERAKTIF (10 SOAL) -->
+        <!-- TAB 4: KUIS LATIHAN -->
         <section id="tab-kuis" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-2xl mx-auto">
                 <div id="quiz-container">
@@ -183,9 +162,7 @@
                     <div id="feedback-box" class="mt-6 hidden p-4 rounded-xl text-sm"></div>
 
                     <div class="mt-6 flex justify-end">
-                        <button id="next-btn" onclick="nextQuestion()" class="hidden bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition">
-                            Selanjutnya
-                        </button>
+                        <button type="button" id="next-btn" onclick="nextQuestion()" class="hidden bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition cursor-pointer">Selanjutnya</button>
                     </div>
                 </div>
 
@@ -193,14 +170,12 @@
                     <div class="text-5xl mb-3">🏆</div>
                     <h3 class="text-2xl font-bold text-amber-950">Kuis Latihan Selesai!</h3>
                     <p id="score-text" class="text-lg text-slate-700 mt-2">Skor Anda: 0 dari 10</p>
-                    <button onclick="restartQuiz()" class="mt-6 bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition">
-                        Ulangi Kuis Latihan
-                    </button>
+                    <button type="button" onclick="restartQuiz()" class="mt-6 bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition cursor-pointer">Ulangi Kuis Latihan</button>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 5: EVALUASI AKHIR (10 SOAL FORMATIF) -->
+        <!-- TAB 5: EVALUASI AKHIR -->
         <section id="tab-evaluasi" class="hidden space-y-6">
             <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-amber-200 max-w-3xl mx-auto">
                 <div class="border-b pb-4 mb-6">
@@ -211,18 +186,14 @@
                 <div id="eval-questions-container" class="space-y-8"></div>
 
                 <div id="eval-submit-container" class="mt-8 pt-4 border-t text-center">
-                    <button onclick="submitEvaluation()" class="bg-amber-900 hover:bg-amber-950 text-white font-bold px-8 py-3 rounded-xl shadow-md transition">
-                        Kumpul dan Lihat Hasil Evaluasi
-                    </button>
+                    <button type="button" onclick="submitEvaluation()" class="bg-amber-900 hover:bg-amber-950 text-white font-bold px-8 py-3 rounded-xl shadow-md transition cursor-pointer">Kumpul dan Lihat Hasil Evaluasi</button>
                 </div>
 
                 <div id="eval-result-box" class="hidden mt-6 p-6 rounded-2xl bg-amber-50 border border-amber-300 text-center">
                     <h3 class="text-2xl font-bold text-amber-950 mb-2">📊 Hasil Evaluasi Anda</h3>
                     <p id="eval-score-text" class="text-xl font-semibold text-amber-800 my-2">Skor: 0 / 100</p>
                     <p id="eval-desc-text" class="text-sm text-slate-700 mb-6"></p>
-                    <button onclick="resetEvaluation()" class="bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition">
-                        Ulangi Evaluasi
-                    </button>
+                    <button type="button" onclick="resetEvaluation()" class="bg-amber-800 hover:bg-amber-900 text-white font-semibold px-6 py-2 rounded-xl transition cursor-pointer">Ulangi Evaluasi</button>
                 </div>
             </div>
         </section>
@@ -255,14 +226,25 @@
     <script>
         // --- 1. NAVIGASI TAB ---
         function switchTab(tabId) {
-            ['materi', 'timeline', 'game', 'kuis', 'evaluasi'].forEach(id => {
-                document.getElementById('tab-' + id).classList.add('hidden');
-                document.getElementById('nav-' + id).classList.remove('bg-amber-700', 'text-white', 'shadow');
-                document.getElementById('nav-' + id).classList.add('hover:bg-amber-800');
+            const tabs = ['materi', 'timeline', 'game', 'kuis', 'evaluasi'];
+            tabs.forEach(id => {
+                const section = document.getElementById('tab-' + id);
+                const navBtn = document.getElementById('nav-' + id);
+                if (section) section.classList.add('hidden');
+                if (navBtn) {
+                    navBtn.classList.remove('bg-amber-700', 'text-white', 'shadow');
+                    navBtn.classList.add('hover:bg-amber-800');
+                }
             });
-            document.getElementById('tab-' + tabId).classList.remove('hidden');
-            document.getElementById('nav-' + tabId).classList.add('bg-amber-700', 'text-white', 'shadow');
-            document.getElementById('nav-' + tabId).classList.remove('hover:bg-amber-800');
+
+            const activeSection = document.getElementById('tab-' + tabId);
+            const activeNav = document.getElementById('nav-' + tabId);
+            
+            if (activeSection) activeSection.classList.remove('hidden');
+            if (activeNav) {
+                activeNav.classList.add('bg-amber-700', 'text-white', 'shadow');
+                activeNav.classList.remove('hover:bg-amber-800');
+            }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -278,22 +260,26 @@
 
         function initTimeline() {
             const btnContainer = document.getElementById('timeline-buttons');
+            if (!btnContainer) return;
             btnContainer.innerHTML = '';
             timelineData.forEach((item, index) => {
                 const btn = document.createElement('button');
-                btn.className = `px-4 py-2 rounded-xl text-sm font-bold border transition ${index === 0 ? 'bg-amber-800 text-white border-amber-800' : 'bg-white text-amber-900 border-amber-300 hover:bg-amber-50'}`;
+                btn.type = 'button';
+                btn.className = `px-4 py-2 rounded-xl text-sm font-bold border transition cursor-pointer ${index === 0 ? 'bg-amber-800 text-white border-amber-800' : 'bg-white text-amber-900 border-amber-300 hover:bg-amber-50'}`;
                 btn.innerText = item.year;
                 btn.onclick = () => selectTimeline(index, btn);
                 btnContainer.appendChild(btn);
             });
-            selectTimeline(0, btnContainer.children[0]);
+            if (btnContainer.children[0]) selectTimeline(0, btnContainer.children[0]);
         }
 
         function selectTimeline(index, element) {
-            Array.from(document.getElementById('timeline-buttons').children).forEach(b => {
-                b.className = 'px-4 py-2 rounded-xl text-sm font-bold border bg-white text-amber-900 border-amber-300 hover:bg-amber-50';
+            const btnContainer = document.getElementById('timeline-buttons');
+            if (!btnContainer) return;
+            Array.from(btnContainer.children).forEach(b => {
+                b.className = 'px-4 py-2 rounded-xl text-sm font-bold border bg-white text-amber-900 border-amber-300 hover:bg-amber-50 cursor-pointer';
             });
-            element.className = 'px-4 py-2 rounded-xl text-sm font-bold border bg-amber-800 text-white border-amber-800';
+            element.className = 'px-4 py-2 rounded-xl text-sm font-bold border bg-amber-800 text-white border-amber-800 cursor-pointer';
 
             const data = timelineData[index];
             document.getElementById('tl-year').innerText = data.year;
@@ -301,7 +287,7 @@
             document.getElementById('tl-desc').innerText = data.desc;
         }
 
-        // --- 3. MINI GAME DATA & LOGIKA ---
+        // --- 3. MINI GAME ---
         const gameData = [
             { q: "Siapa tokoh yang memimpin pendirian Budi Utomo di STOVIA?", options: ["Dr. Sutomo", "Soekarno", "HOS Tjokroaminoto", "Ki Hajar Dewantara"], answer: 0 },
             { q: "Tanggal berapakah Sumpah Pemuda diikrarkan?", options: ["20 Mei 1908", "28 Oktober 1928", "17 Agustus 1945", "1 Juni 1945"], answer: 1 },
@@ -330,7 +316,8 @@
             optContainer.innerHTML = '';
             currentG.options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
-                btn.className = 'w-full text-left p-3 rounded-xl border border-amber-300 bg-white hover:bg-amber-100 font-medium text-slate-800 transition';
+                btn.type = 'button';
+                btn.className = 'w-full text-left p-3 rounded-xl border border-amber-300 bg-white hover:bg-amber-100 font-medium text-slate-800 transition cursor-pointer';
                 btn.innerText = opt;
                 btn.onclick = () => checkGameAnswer(idx, currentG.answer);
                 optContainer.appendChild(btn);
@@ -364,7 +351,7 @@
             loadGameQuestion();
         }
 
-        // --- 4. KUIS LATIHAN (10 SOAL) ---
+        // --- 4. KUIS LATIHAN ---
         const quizData = [
             { question: "Organisasi modern pertama di Indonesia yang lahir pada tanggal 20 Mei 1908 adalah...", options: ["Sarekat Islam", "Budi Utomo", "Indische Partij", "Perhimpunan Indonesia"], answer: 1, explanation: "Budi Utomo didirikan pada 20 Mei 1908 oleh para pelajar STOVIA." },
             { question: "Faktor internal utama yang mendorong munculnya pergerakan nasional adalah...", options: ["Kemenangan Jepang atas Rusia", "Penderitaan rakyat akibat penjajahan", "Pengaruh Revolusi Prancis", "Masuknya paham liberalisme"], answer: 1, explanation: "Penderitaan akibat kolonialisme memicu kesadaran melawan bersama." },
@@ -393,7 +380,8 @@
             
             q.options.forEach((opt, idx) => {
                 const btn = document.createElement('button');
-                btn.className = 'w-full text-left p-3 rounded-xl border border-amber-200 bg-amber-50/50 hover:bg-amber-100 font-medium text-slate-700 transition';
+                btn.type = 'button';
+                btn.className = 'w-full text-left p-3 rounded-xl border border-amber-200 bg-amber-50/50 hover:bg-amber-100 font-medium text-slate-700 transition cursor-pointer';
                 btn.innerText = opt;
                 btn.onclick = () => selectAnswer(idx);
                 optionsContainer.appendChild(btn);
@@ -446,7 +434,7 @@
             loadQuestion();
         }
 
-        // --- 5. EVALUASI AKHIR (10 SOAL) ---
+        // --- 5. EVALUASI AKHIR ---
         const evaluasiData = [
             { q: "Politik Etis pada 1901 memicu pergerakan nasional lewat program utamanya di bidang...", options: ["Irigasi", "Migrasi", "Edukasi (pendidikan pribumi)", "Kerja rodi"], answer: 2 },
             { q: "Organisasi pertama yang menggunakan nama 'Indonesia' secara tegas di luar negeri adalah...", options: ["Budi Utomo", "Perhimpunan Indonesia (PI)", "Indische Partij", "PNI"], answer: 1 },
@@ -456,12 +444,13 @@
             { q: "Douwes Dekker, Tjipto Mangoenkoesoemo, dan Ki Hajar Dewantara mendirikan partai bernama...", options: ["Indische Partij", "Budi Utomo", "Sarekat Islam", "Partai Komunis Indonesia"], answer: 0 },
             { q: "Kongres Pemuda I yang bertujuan menyatukan organisasi pemuda diselenggarakan pada tahun...", options: ["1908", "1912", "1926", "1928"], answer: 2 },
             { q: "Dewan Rakyat bentukan pemerintah kolonial Belanda tempat kaum moderat duduk berjuang disebut...", options: ["Volksraad", "Budi Utomo", "Stovia", "Parindra"], answer: 0 },
-            { q: "Organisasi pergerakan nasional yang didirikan oleh Douwes Dekker memiliki ciri khas bersifat...", options: ["Kedaerahan suku", "Indis (Nasional untuk semua golongan", "Keagamaan eksklusif", "Kooperatif penuh dengan gubernur"], answer: 1 },
+            { q: "Organisasi pergerakan nasional yang didirikan oleh Douwes Dekker memiliki ciri khas bersifat...", options: ["Kedaerahan suku", "Indis (Nasional untuk semua golongan)", "Keagamaan eksklusif", "Kooperatif penuh dengan gubernur"], answer: 1 },
             { q: "Faktor eksternal kebangkitan nasional yang berasal dari daratan Cina dipelopori oleh...", options: ["Sun Yat-sen", "Mahatma Gandhi", "Jose Rizal", "Emilio Aguinaldo"], answer: 0 }
         ];
 
         function initEvaluation() {
             const container = document.getElementById('eval-questions-container');
+            if (!container) return;
             container.innerHTML = '';
             evaluasiData.forEach((item, index) => {
                 let optionsHtml = '';
@@ -498,7 +487,7 @@
                 if (parseInt(selected.value) === item.answer) correctCount++;
             });
 
-            const finalScore = correctCount * 10; // 10 soal x 10 = 100
+            const finalScore = correctCount * 10;
             document.getElementById('eval-score-text').innerText = `Skor Anda: ${finalScore} / 100 (${correctCount} benar dari 10 soal)`;
             
             let message = "";
@@ -525,13 +514,13 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Inisialisasi awal
-        window.onload = () => {
+        // Inisialisasi awal saat halaman dimuat
+        window.addEventListener('DOMContentLoaded', () => {
             initTimeline();
             loadGameQuestion();
             loadQuestion();
             initEvaluation();
-        };
+        });
     </script>
 </body>
 </html>
